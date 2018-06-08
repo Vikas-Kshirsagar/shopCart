@@ -8,8 +8,27 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Shop Item - Start Bootstrap Template</title>
+    <title>Sign In</title>
 
+    <script src="../static/vendor/jquery/jquery.min.js"></script>
+    <script>
+    $(function() {
+    $('#btnSignIn').click(function() {
+ 
+        $.ajax({
+            url: '/signIn',
+            data: $('form').serialize(),
+            type: 'POST',
+            success: function(response) {
+                console.log("response 1");
+            },
+            error: function(error) {
+                console.log("error");
+            }
+        });
+    });
+});
+</script>
 
   </head>
 
@@ -37,7 +56,9 @@
                           <input type="checkbox" class="form-check-input" id="exampleCheck1">
                           <label class="form-check-label" for="exampleCheck1">Check me out</label>
                         </div>
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <button type="submit" class="btn btn-primary" id="btnSignIn">Submit</button> 
+                        <span style="padding-left:50px"><a href="forgotPassword">Forgot Password?</a></span>
+                    
                       </form>
         </div>
         <!-- /.col-lg-12 -->

@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Python Flask Bucket List App</title>  
+    <title>Sign Up</title>  
 
-    <link href="../static/signup.css" rel="stylesheet">
-    <script src="../static/js/jquery-3.3.1.min.js"></script>
+    <script src="../static/vendor/jquery/jquery.min.js"></script>
     <script>
     $(function() {
     $('#btnSignUp').click(function() {
@@ -21,7 +20,8 @@
             }
         });
     });
-});</script>
+});
+</script>
   </head>
  
   <body>
@@ -52,7 +52,8 @@
                           <label for="exampleInputPassword1">Password</label>
                           <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
                         </div>
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <button type="submit" class="btn btn-primary" id="btnSignUp">Submit</button>
+                        <span style="padding-left:50px"><a href="signIn">Already a member?</a></span>
                       </form>
         </div>
         <!-- /.col-lg-12 -->
